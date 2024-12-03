@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --primary-blue: #0047CC;
+    --primary-red: #FF0000;
+    --text-black: #1A1A1A;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--text-black);
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    padding: 1rem 2rem;
+    box-shadow: 0 5px 15px rgba(0, 71, 204, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-container img {
+    height: 60px;
+}
+
+.logo-container p {
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-black);
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    color: var(--white) !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(14, 97, 252, 0.2);
+    text-decoration: none;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* Main */
+main {
+    margin-top: 100px;
+}
+
+/* Hero Section */
+/* Separate the background image from the content for opacity to work */
+.hero-section {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.1;
+    background-image: url("./assets/image1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-content {
+    padding: 7rem 4rem;
+    width: 100%;
+    line-height: 0.9;
+}
+
+.hero-content h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.hero-content em {
+    font-style: italic;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Keeping it for demo */
+.hero-content em:nth-child(3) {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+
+/* Intros Heading */
+.red-line-section {
+    padding: 5rem 4rem;
+}
+
+.red-line-heading {
+    display: flex;
+}
+
+.red-line-large {
+    width: 4px;
+    height: 90px;
+    background: var(--primary-red);
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.red-line-small {
+    width: 4px;
+    height: 40px;
+    background: var(--primary-red);
+    margin-bottom: 1rem;
+    margin-right: 0.3rem;
+}
+
+.red-line-section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -0.2rem;
+}
+
+.red-line-info-box {
+    margin-top: auto;
+    padding: 1em 4em;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.red-line-content {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+    margin-left: auto;
+}
+
+.red-line-content p em {
+    font-style: italic;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* Facade Section */
+.facade-section {
+    margin-top: 3rem;
+    position: relative;
+    height: 60vh;
+    background-image: url("./assets/Spacio\ TechTonics\ Consultancy\ V21.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.facade-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 4rem;
+}
+
+.facade-content h2 {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 0.9;
+    letter-spacing: -0.2rem;
+    margin-top: auto;
+    margin-bottom: 7rem;
+    z-index: 2;
+}
+
+.navigation-arrows {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+
+
+.navigation-arrows button {
+    background: none;
+    color: var(--white);
+    border: none;
+    font-weight: 900;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Presence Section */
+.presence-content-container {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.cities-list {
+    margin-top: 2rem;
+    padding-left: 2rem;
+}
+
+.india-map {
+    width: 50%;
+    height: 400px;
+    background: #FFF5F5;
+    border-radius: 20px;
+}
+
+.statistics {
+    display: flex;
+    gap: 4rem;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: #F8F8F8;
+    border-radius: 15px;
+}
+
+.stat-item h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.2;
+}
+
+/* Latest Work Section */
+.latest-work {
+    padding: 5rem 4rem;
+}
+
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.view-all {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.work-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.work-navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 2;
+}
+
+.work-navigation button {
+    background: rgba(255,255,255,0.2);
+    color: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.work-navigation button:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+.project-name {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: var(--white);
+    font-weight: 500;
+    z-index: 2;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: var(--text-black);
+        margin: 5px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .company-intro h2 {
+        font-size: 2rem;
+    }    
+    
+    .presence-content {
+        flex-direction: column;
+    }
+
+    .india-map {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .statistics {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .work-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-content {
+        padding: 10rem 20rem;
+    }
+
+    .red-line-section {
+        padding: 7rem 20rem;
+    }
+
+    .latest-work {
+        padding: 7rem 20rem;
+    }
+}
